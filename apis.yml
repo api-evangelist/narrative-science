@@ -1,11 +1,35 @@
 aid: narrative-science
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/narrative-science.png
 name: Narrative Science
-description: Narrative Science is a company surfaced as a portfolio company of battery-ventures, sapphire-ventures
-  and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the
-  enrichment pipeline.
+description: >-
+  Narrative Science was a Chicago-based artificial-intelligence company known for
+  its Quill natural-language-generation (NLG) platform, which automatically turned
+  structured data into written narratives and data stories. It was surfaced as a
+  portfolio company of Battery Ventures and Sapphire Ventures and added to the API
+  Evangelist network as a stub for enrichment. As of this enrichment pass the company
+  no longer operates independently: Salesforce acquired Narrative Science in December
+  2021 and folded its technology into Tableau. The former corporate domain
+  (www.narrativescience.com) now 301-redirects to Tableau's AI/augmented-analytics
+  pages, and no developer, api, or docs subdomains resolve. There is no independent
+  public API, developer portal, OpenAPI, or documentation surface remaining to
+  enrich; this profile is retained as a historical/acquisition record.
 url: https://raw.githubusercontent.com/api-evangelist/narrative-science/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
+x-status: acquired
+x-acquired-by: salesforce
+x-acquired-date: '2021-12'
 x-backed-by:
 - battery-ventures
 - sapphire-ventures
@@ -13,9 +37,15 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
+- Artificial Intelligence
+- Natural Language Generation
+- Data Storytelling
+- Analytics
+- Business Intelligence
+- Acquired
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +55,15 @@ maintainers:
 common:
 - type: Website
   url: https://www.narrativescience.com/
+x-enrichment:
+  date: '2026-07-20'
+  status: nochange
+  artifacts_added: 0
+  pass: local-v1
+  notes: >-
+    Re-verified. www.narrativescience.com 301-redirects to tableau.com augmented-analytics
+    (Salesforce). Legacy subdomains still hold stale DNS but no live endpoint:
+    api.narrativescience.com -> dead AWS ELB (HTTP 000); quillengagesupport.narrativescience.com
+    -> dead Freshdesk LB (000); quillengage.com -> Cloudflare (000). No reachable
+    OpenAPI, docs, portal, security.txt, or SDK. Acquired company with no independent
+    API surface; nothing to search/generate/derive.
